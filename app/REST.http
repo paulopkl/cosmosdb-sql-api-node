@@ -1,0 +1,27 @@
+###### Get All items ######
+GET http://localhost:3333/
+
+###### Get item by category name ######
+@Id = 70b63682-b93a-4c77-aad2-65501347265f
+GET http://localhost:3333/{{Id}}
+
+###### Get item by category name ######
+@categoryName = gear-surf-surfboards
+GET http://localhost:3333/category/{{categoryName}}
+
+###### Create an item ###### 
+POST http://localhost:3333/
+Content-Type: application/json
+
+{
+    "category": "gear-surf-surfboards",
+    "name": "test 2",
+    "quantity": 10,
+    "price": 105.00,
+    "clearance": false
+}
+
+###### Delete Item by id with partitionKey ######
+@Id = 70b63682-b93a-4c77-aad2-65501347265f
+@partitionKey = gear-surf-surfboards
+DELETE http://localhost:3333/{{Id}}
