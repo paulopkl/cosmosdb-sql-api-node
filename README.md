@@ -6,23 +6,7 @@ This repository contains all the necessary code to set up an Azure Cosmos DB wit
 
 ## Project Structure
 
-├── infra/                          # Terraform infrastructure code
-│   ├── main.tf                     # Main Terraform configuration
-│   ├── variables.tf                # Terraform variables
-│   └── outputs.tf                  # Outputs for provisioned resources
-└── app/                            # Node.js CRUD application
-    ├── src/
-    │   ├── repository/
-    │   |   └── enitity/            # Database entities folder
-    │   ├── routes/
-    |   |   └── item.route.ts       # Cosmos DB configuration Service and Routes configuration
-    │   └── services/
-    │       ├── enitity/            # DTO entities folder
-    │       └── cosmosdb.service.ts # CosmosDB Service
-    ├── index.ts                    # Main application file
-    ├── package.json                # Node.js dependencies and scripts
-    ├── tsconfig.json               # TypeScript configuration
-    └── REST.http                   # HTTP requests file
+![Project Architecture](.github/folder-structure.png)
 
 ## Prerequisites
 
